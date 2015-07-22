@@ -39,8 +39,7 @@ There are various ways you can contribute:
 
 1. Raise an [Issue](https://github.com/DannyCooper/olympus-shortcodes/issues) on GitHub
 2. Send us a Pull Request with your bug fixes and/or new features
-3. Translate Olympus Shortcodes into [different languages](https://www.transifex.com/projects/p/olympus-shortcodes/)
-4. Provide feedback and suggestions on [enhancements](https://github.com/DannyCooper/olympus-shortcodes/issues?direction=desc&labels=Enhancement&page=1&sort=created&state=open)
+3. Provide feedback and suggestions on [enhancements](https://github.com/DannyCooper/olympus-shortcodes/issues?direction=desc&labels=Enhancement&page=1&sort=created&state=open)
 
 
 == Installation ==
