@@ -5,7 +5,7 @@ Plugin URI: http://olympusthemes.com/toolkit
 Description: Adds shortcodes you can use in your posts, pages and widgets.
 Author: Olympus Themes
 Author URI: http://olympusthemes.com
-Version: 1.0.1
+Version: 1.0.2
 Text Domain: olympus-shortcodes
 License: GPL version 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 */

@@ -9,10 +9,6 @@ jQuery(function ($) {
 			$(this).toggleClass("active").next().slideToggle("fast");
 			return false; //Prevent the browser jump to the link anchor
 		});
-		
-		$('.flexslider').flexslider({
-			controlNav: false,
-		});
 					
 		// UI tabs
 		$( ".olympus-tabs" ).tabs();
