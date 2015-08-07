@@ -5,7 +5,7 @@ Plugin URI: http://olympusthemes.com/toolkit
 Description: Adds shortcodes you can use in your posts, pages and widgets.
 Author: Olympus Themes
 Author URI: http://olympusthemes.com
-Version: 1.0.0
+Version: 1.0.1
 Text Domain: olympus-shortcodes
 License: GPL version 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 */
@@ -23,7 +23,7 @@ class Olympus_Shortcodes {
 	function __construct() {
 
 		add_action( 'init', array( $this, 'init' ) );
-		require_once( plugin_dir_path( __FILE__ ) .'includes/shortcode-functions.php' );
+		
 	}
 
 	/**
@@ -47,6 +47,8 @@ class Olympus_Shortcodes {
 		wp_register_script( 'google-maps', '//maps.googleapis.com/maps/api/js?sensor=false' );
 		wp_register_script( 'flexslider', $scripts_dir . 'js/jquery.flexslider.js', 'jquery', '1.0', true );
 		wp_register_script( 'olympus-shortcode-scripts', $scripts_dir . 'js/scripts.js', array( 'jquery', 'jquery-ui-tabs' ), '1.0', true );
+		
+		require_once( plugin_dir_path( __FILE__ ) .'includes/shortcode-functions.php' );
 
 	}
 

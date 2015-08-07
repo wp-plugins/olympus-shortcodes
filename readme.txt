@@ -2,7 +2,7 @@
 Contributors: DannyCooper
 Tags: buttons, call to action, cocial icons, image slider, text highlight, headings, dividers, content columns, content boxes, content toggle, content accordion, content tabs, font awesome icons
 Requires at least: 4.0
-Tested up to: 4.2.2
+Tested up to: 4.2.4
 License: GPLv2 or later
 Stable tag: trunk
 
@@ -48,6 +48,11 @@ There are various ways you can contribute:
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Changelog ==
+
+= 1.0.1 =
+
+* Move require to init() function
+* Fix broken wp_enqueue_scripts() in shortcode-functions.php
 
 = 1.0 =
 * Initial release

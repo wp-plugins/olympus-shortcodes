@@ -225,12 +225,13 @@ add_shortcode( 'olympus_column', 'olympus_column_shortcode' );
  * @param string $content User inputted content.
  */
 function olympus_toggle_shortcode( $atts, $content = null ) {
+
+	wp_enqueue_script( 'olympus-shortcode-scripts' );
+	
 	extract( shortcode_atts( array(
 		'title'			=> 'Toggle Title',
 		'class'			=> '',
 	), $atts ) );
-
-	wp_enqueue_script( 'olympus_shortcode_scripts' );
 
 	// Display the Toggle.
 	return '<div class="olympus-toggle '. $class .'"><h3 class="olympus-toggle-trigger">'. $title .'</h3><div class="olympus-toggle-container">' . do_shortcode( $content ) . '</div></div>';
@@ -247,12 +248,12 @@ add_shortcode( 'olympus_toggle', 'olympus_toggle_shortcode' );
  */
 function olympus_accordion_main_shortcode( $atts, $content = null  ) {
 
+	wp_enqueue_script( 'olympus-shortcode-scripts' );	
+	
 	extract( shortcode_atts( array(
 		'title'			=> 'Accordian Title',
 		'class'			=> '',
 	), $atts ) );
-
-	wp_enqueue_script( 'olympus_shortcode_scripts' );
 
 	// Display the accordion.
 	return '<div class="olympus-accordion '. $class .'">' . do_shortcode( $content ) . '</div>';
@@ -286,7 +287,7 @@ add_shortcode( 'olympus_accordion_item', 'olympus_accordion_inner_shortcode' );
  */
 function olympus_tabs_shortcode( $atts, $content = null ) {
 
-	wp_enqueue_script( 'olympus_shortcode_scripts' );
+	wp_enqueue_script( 'olympus-shortcode-scripts' );
 
 	// Display Tabs.
 	$defaults = array();
@@ -421,6 +422,9 @@ add_shortcode( 'olympus_heading', 'olympus_heading_shortcode' );
  */
 function olympus_shortcode_googlemaps($atts, $content = null) {
 
+	wp_enqueue_script( 'google-maps' );
+	wp_enqueue_script( 'olympus-shortcode-scripts' );	
+	
 	extract(shortcode_atts(array(
 			'title'			=> '',
 			'location'		=> '',
@@ -430,9 +434,6 @@ function olympus_shortcode_googlemaps($atts, $content = null) {
 			'align'			=> '',
 			'class'			=> '',
 	), $atts));
-
-	wp_enqueue_script( 'google-maps' );
-	wp_enqueue_script( 'olympus_shortcode_scripts' );
 
 	$output = '<div id="map_canvas_'.rand( 1, 100 ).'" class="googlemap '. $class .'" style="height:'.$height.'px;width:100%">';
 		$output .= ( ! empty( $title )) ? '<input class="title" type="hidden" value="'.$title.'" />' : '';
