@@ -49,6 +49,10 @@ There are various ways you can contribute:
 
 == Changelog ==
 
+= 1.0.3 =
+
+* Fix: image slider shortcode
+
 = 1.0.1 =
 
 * Move require to init() function

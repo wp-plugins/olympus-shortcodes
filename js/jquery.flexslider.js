@@ -1190,10 +1190,10 @@
   };
 })(jQuery);
 
-$(document).ready(function () {
+jQuery(document).ready(function () {
         
-    $('.flexslider').flexslider({
+    jQuery('.flexslider').flexslider({
         controlNav: false,
     });
    
-}
+});
