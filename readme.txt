@@ -49,6 +49,10 @@ There are various ways you can contribute:
 
 == Changelog ==
 
+= 1.0.4 =
+
+* Add: Check for conflicting plugin on activation
+
 = 1.0.3 =
 
 * Fix: image slider shortcode

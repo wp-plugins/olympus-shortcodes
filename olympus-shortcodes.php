@@ -5,10 +5,23 @@ Plugin URI: http://olympusthemes.com/toolkit
 Description: Adds shortcodes you can use in your posts, pages and widgets.
 Author: Olympus Themes
 Author URI: http://olympusthemes.com
-Version: 1.0.3
+Version: 1.0.4
 Text Domain: olympus-shortcodes
 License: GPL version 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 */
+
+register_activation_hook( __FILE__, 'activate_olympus_shortcodes' );
+
+/**
+  * Plugin Activation hook function to check for conflicting plugin
+  */
+ function activate_olympus_shortcodes() {
+     if(class_exists('Olympus_Newsletter')) {
+    deactivate_plugins( basename( __FILE__ ) );
+    wp_die('<p>Please deactivate Olympus Toolkit before enabling this plugin.</p>','Plugin Activation Error',  array( 'response'=>200, 'back_link'=>TRUE ) );
+     }
+}
+
 
 /**
  * Main Olympus_Shortcode Class
